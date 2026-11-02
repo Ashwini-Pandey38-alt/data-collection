@@ -3,3 +3,5 @@ import requests
 url="https://www.scrapethissite.com/pages/simple/"
 res=requests.get(url)
 res
+
+res.status_code#200 will be the answer
