@@ -5,3 +5,4 @@ res=requests.get(url)
 res
 
 res.status_code#200 will be the answer
+res.text
