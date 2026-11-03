@@ -24,10 +24,27 @@ with open("scraped_data/data1.html", "r") as f:
 
 soup = BeautifulSoup(html_content, "lxml")
 
-all_h3 = soup.find_all("h3")
+soup.find('h3')
+# .find() is use to get all the data come under the TAG you mention in it
 
+
+
+all_h3 = soup.find_all("h3")
+# find_all() is the function that will return the first matching values the the TAG
 all_countries = []
 
 for h3 in all_h3:
     name = h3.get_text(strip=True)
     # get_text will return the text collected from the HTML file
+
+all_h3 = soup.find_all("h3")
+
+all_countries = []
+population = h3.find_next("div").select("span.country-population")[0].get_text(strip=True)
+    # print(h3.find_next("div").select_one("span.country-population").get_text(strip=True))
+
+all_countries.append([name, population])
+
+    
+
+
