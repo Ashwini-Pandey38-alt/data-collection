@@ -50,3 +50,5 @@ all_countries.append([name, population])
 import pandas as pd
 
 df = pd.DataFrame(all_countries, columns=["Name", "Population"])
+
+df.to_csv("cleaned_data/data.csv", index=False)
